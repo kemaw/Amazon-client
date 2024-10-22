@@ -10,7 +10,7 @@ import "firebase/compat/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "Process.env.FIREBASE_API_KEY",
+  apiKey: import.meta.env.VITE_API_KEY,
   authDomain: "clone-kemaw.firebaseapp.com",
   projectId: "clone-kemaw",
   storageBucket: "clone-kemaw.appspot.com",

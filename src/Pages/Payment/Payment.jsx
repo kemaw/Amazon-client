@@ -72,26 +72,10 @@ function Payment() {
           basket: basket,
           amount: paymentIntent.amount,
           created: paymentIntent.created,
-          // status: paymentIntent.status,
-          // paymentIntentId: paymentIntent.id,
-          // user: user.uid,
+         
         });
-      // await setDoc(doc(db, "users", user.uid, "orders", paymentIntent.id), {
-      //   basket: basket, // order details
-      //   amount: paymentIntent.amount, // amount in cents
-      //   created: paymentIntent.created, // timestamp
-      // });
-      // clear the basket
+      
       dispatch({ type: Type.EMPTY_BASKET });
-
-      // send email to the user
-      // await sendEmail(
-      //   user.email,
-      //   "Your order has been placed",
-      //   `Thank you for your order. Your order details are: ${JSON.stringify(
-      //     basket
-      //   )}`
-      // );
 
       setProcessing(false);
       navigate("/orders", { state: { msg: "you have placed new order" } });
