@@ -72,9 +72,8 @@ function Payment() {
           basket: basket,
           amount: paymentIntent.amount,
           created: paymentIntent.created,
-         
         });
-      
+
       dispatch({ type: Type.EMPTY_BASKET });
 
       setProcessing(false);
@@ -151,10 +150,3 @@ function Payment() {
 }
 
 export default Payment;
-
-// //http://127.0.0.1:5001/clone-kemaw/us-central1/api
-// await setDoc(doc(db, 'users', user.uid, 'orders', paymentIntent.id), {
-//   basket: basket, // order details
-//   amount: paymentIntent.amount, // amount in cents
-//   created: paymentIntent.created, // timestamp
-// });
