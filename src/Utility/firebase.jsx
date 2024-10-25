@@ -15,8 +15,8 @@ const firebaseConfig = {
   projectId: "clone-kemaw",
   storageBucket: "clone-kemaw.appspot.com",
   messagingSenderId: "32357095168",
-  // appId: "1:32357095168:web:4a31af9db92279573cc5e5",
-  appId: "1:32357095168:web:48a9e3c1b0df97c63cc5e5",
+  appId: "1:32357095168:web:4a31af9db92279573cc5e5",
+  // appId: "1:32357095168:web:48a9e3c1b0df97c63cc5e5",
 };
 
 // Initialize Firebase
