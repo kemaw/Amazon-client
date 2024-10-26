@@ -40,6 +40,7 @@ function Payment() {
 
   const handlePayment = async (event) => {
     event.preventDefault();
+    console.log("test");
 
     try {
       setProcessing(true);
@@ -49,6 +50,7 @@ function Payment() {
         url: `/payment/create?total=${total * 100}`,
       });
       console.log(response.data);
+      console.log("new test");
 
       const clientSecret = response.data?.clientSecret;
       // console.log(clientSecret);
@@ -73,13 +75,14 @@ function Payment() {
           amount: paymentIntent.amount,
           created: paymentIntent.created,
         });
+        console.log("2 new test");
 
       dispatch({ type: Type.EMPTY_BASKET });
 
       setProcessing(false);
       navigate("/orders", { state: { msg: "you have placed new order" } });
     } catch (error) {
-      console.error("Error:", error);
+      console.error(error);
       setProcessing(false);
     }
   };
